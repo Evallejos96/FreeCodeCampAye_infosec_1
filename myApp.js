@@ -7,7 +7,8 @@ app.use(helmet());
 // Quitar X-Powered-By
 app.use(helmet.hidePoweredBy());
 
-
+// Proteger contra clickjacking (X-Frame-Options: DENY)
+app.use(helmet.frameguard({ action: 'deny' }));
 
 
 
