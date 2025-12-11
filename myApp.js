@@ -4,8 +4,8 @@ const app = express();
 const helmet = require('helmet');
 app.use(helmet());
 
-
-
+// Quitar X-Powered-By
+app.use(helmet.hidePoweredBy());
 
 
 
