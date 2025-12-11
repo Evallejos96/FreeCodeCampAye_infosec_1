@@ -27,7 +27,8 @@ app.use(helmet.hsts({
   force: true
 }));
 
-
+// Desactivar DNS Prefetching
+app.use(helmet.dnsPrefetchControl());
 
 
 
