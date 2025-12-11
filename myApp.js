@@ -16,8 +16,8 @@ app.use(helmet.xssFilter());
 // Evitar que el navegador adivine el MIME-type
 app.use(helmet.noSniff());
 
-
-
+// Evitar que IE abra descargas en el contexto del sitio
+app.use(helmet.ieNoOpen());
 
 
 
