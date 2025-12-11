@@ -13,6 +13,8 @@ app.use(helmet.frameguard({ action: 'deny' }));
 // Mitigar ataques XSS
 app.use(helmet.xssFilter());
 
+// Evitar que el navegador adivine el MIME-type
+app.use(helmet.noSniff());
 
 
 
