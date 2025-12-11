@@ -31,7 +31,8 @@ app.use(helmet.hsts({
 app.use(helmet.dnsPrefetchControl());
 
 
-
+// Desactivar caché del navegador
+app.use(helmet.noCache());
 
 
 
