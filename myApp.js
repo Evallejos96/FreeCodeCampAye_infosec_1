@@ -34,7 +34,17 @@ app.use(helmet.dnsPrefetchControl());
 // Desactivar caché del navegador
 app.use(helmet.noCache());
 
+// ----- AÑADIR CSP (la parte que pide el test) -----
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'trusted-cdn.com']
+    }
+  })
+);
 
+// -----------------------------------------------
 
 
 
